@@ -13,8 +13,8 @@ do
 
   echo "----------"
 
-  echo "mkdir -p $(dirname \"$d\")"
-  mkdir -p $(dirname "$d")
+  echo "mkdir -p \"$(dirname "$d")\""
+  mkdir -p "$(dirname "$d")"
 
   echo "git clone \"https://gerrit.wikimedia.org/r/$p\" \"${d}\""
   git clone "https://gerrit.wikimedia.org/r/$p" "${d}"
