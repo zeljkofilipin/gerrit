@@ -2,7 +2,7 @@
 
 # get a list of all gerrit projects
 # https://gerrit.wikimedia.org/r/Documentation/cmd-ls-projects.html
-for p in `ssh -p 29418 zfilipin@gerrit.wikimedia.org gerrit ls-projects`
+for p in $(ssh -p 29418 zfilipin@gerrit.wikimedia.org gerrit ls-projects)
 do
   # replacing dashes with underscores in folder names
   # it should make it easier to update all repositories
@@ -13,8 +13,8 @@ do
 
   echo "----------"
 
-  echo "mkdir -p \`dirname \"$d\"\`"
-  mkdir -p `dirname "$d"`
+  echo "mkdir -p $(dirname \"$d\")"
+  mkdir -p $(dirname "$d")
 
   echo "git clone \"https://gerrit.wikimedia.org/r/$p\" \"${d}\""
   git clone "https://gerrit.wikimedia.org/r/$p" "${d}"
