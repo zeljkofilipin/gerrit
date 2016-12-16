@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # get a list of all gerrit projects
 # https://gerrit.wikimedia.org/r/Documentation/cmd-ls-projects.html
 for p in `ssh -p 29418 zfilipin@gerrit.wikimedia.org gerrit ls-projects`
