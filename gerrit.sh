@@ -4,7 +4,7 @@
 # https://gerrit.wikimedia.org/r/Documentation/cmd-ls-projects.html
 for p in $(ssh -p 29418 zfilipin@gerrit.wikimedia.org gerrit ls-projects)
 do
-  # replacing dashes with underscores in folder names
+  # replacing slashes with underscores in folder names
   # it should make it easier to update all repositories
   # http://www.tldp.org/LDP/abs/html/string-manipulation.html#SUBSTRREPL01
   # ${string//substring/replacement}
