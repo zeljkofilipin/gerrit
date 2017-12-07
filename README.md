@@ -2,7 +2,7 @@
 
 ## Usage
 
-    $ bash gerrit.sh
+    $ bash git-clone.sh
 
 ## Notes
 
