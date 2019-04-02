@@ -8,7 +8,7 @@
 # execute the command from the folder where all extensions are located
 # usage: ruby sonar-scanner.rb
 
-folders = Dir.glob('*').select {|f| File.directory? f}
+folders = Dir.glob('*').select {|f| File.directory? f}.sort
 total = folders.size
 
 # get Sonar API key at https://sonarcloud.io/account/security/
