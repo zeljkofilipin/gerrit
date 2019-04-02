@@ -1,11 +1,11 @@
-# run sonar-scanner for all folders
-#
-# folders must have name in the format: mediawiki-extensions-NAME
-# example: mediawiki-extensions-3D
+# run sonar-scanner for all extensions
 #
 # prerequisites: docker, ruby
 #
-# execute the command from the folder where all folders are located
+# extensions have to be in folders with name in the format: mediawiki-extensions-NAME
+# example: mediawiki-extensions-3D
+#
+# execute the command from the folder where all extensions are located
 # usage: ruby sonar-scanner.rb
 
 folders = Dir.glob('*').select {|f| File.directory? f}
